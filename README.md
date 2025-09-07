@@ -65,47 +65,27 @@ Confidence threshold: 0.8
 Directory Structure Explanation
 
     📂 major_project_final/
-    ├── 📂 data/                     
-    │   ├── 📂 train/                 
-    │   │   ├── 📂 images/           
-    │   │   └── 📂 labels/           
-    │   └── 📂 val/                  
-    │       ├── 📂 images/           
-    │       └── 📂 labels/           
-    ├── 📂 runs/                      
-    │   └── 📂 kfold/                 
-    │       ├── 📂 fold_1/            
-    │       │   └── 📂 weights/       
-    │       │       └── 📄 best.pt    
-    │       ├── 📂 fold_2/
-    │       │   └── 📂 weights/
-    │       │       └── 📄 best.pt
-    │       └── 📂 fold_3/
-    │           └── 📂 weights/
-    │               └── 📄 best.pt
-    │
-    ├── 📂 src/
-    │   ├── 📄 dataset.py            
-    │   ├── 📄 swin_backbone.py      
-    │   ├── 📄 kfold.py             
-    │   ├── 📄 kflod2.py             
-    │   ├── 📄 train.py             
-    │   ├── 📄 train_detect.py        
-    │   ├── 📄 gui_detection.py      
-    │   ├── 📄 quick.py               
-    │   └── 📄 gpu.py                 
-    │
-    ├── 📂 configs/                 
-    │   ├── 📄 data_fold1.yaml       
-    │   ├── 📄 train_fold1.txt      
-    │   └── 📄 val_fold1.txt         
-    │
-    ├── 📂 weights/                   
-    │   └── 📄 yolo11n.pt             
-    │
-    ├── 📄 requirements.txt           
-    ├── 📄 PRODUCT.md              
-    └── 📄 README.md                
+├── 📂 data/                     # Dataset (train/val images + labels)
+├── 📂 runs/                     # Training & inference results
+│   └── 📂 detect/               
+│       └── 📂 weights/
+│           └── 📄 best.pt        # Best trained model
+│
+├── 📂 src/                      # Source code
+│   ├── 📄 train.py              # Training script
+│   ├── 📄 train_detect.py       # Inference script
+│   ├── 📄 gui_detection.py      # GUI with sound + alerts
+│   └── 📄 swin_backbone.py      # Swin Transformer backbone
+│
+├── 📂 configs/                  # Config files
+│   └── 📄 data.yaml             # Dataset config
+│
+├── 📂 weights/                  # Pretrained weights
+│   └── 📄 yolo11n.pt
+│
+├── 📄 requirements.txt          # Dependencies
+└── 📄 README.md                 # Documentation
+              
 ## Abbreviations and Glossary
     YOLO: You Only Look Once (object detection model)
     Swin: Shifted Window Transformer
@@ -135,7 +115,7 @@ Confidence Threshold: 0.8
     Low FPS → reduce imgsz, use a smaller model (e.g., yolov8n.pt)
     False alarms → increase conf, check dataset labeling
 ## Acknowledgements
-We would like to express our heartfelt gratitude to our project guide and Head of the Department, Mr. Sunil Kumar S, Head of the Department, Artificial Intelligence & Machine Learning, for his invaluable guidance, encouragement, and support throughout the course of this project. His constructive suggestions, positive attitude, and continuous motivation greatly helped us in coordinating and successfully completing this study, especially in preparing this report.
+We would like to express our heartfelt gratitude to our project guide and Head of the Department, Dr. Sunil Kumar S, Head of the Department, Artificial Intelligence & Machine Learning, for his invaluable guidance, encouragement, and support throughout the course of this project. His constructive suggestions, positive attitude, and continuous motivation greatly helped us in coordinating and successfully completing this study, especially in preparing this report.
 
 We would also like to acknowledge with deep appreciation the encouragement and support of our parents and friends, whose guidance and motivation were instrumental in completing this project.
 
