@@ -88,26 +88,41 @@ Directory Structure Explanation
     ├─ requirements.txt
     └─ README.md
 ## File Naming Conventions
-
     Model weights: best.pt, last.pt
     Dataset YAML: data.yaml
     Configs: descriptive YAML filenames (e.g., default.yaml)
     Scripts: action-oriented (train.py, infer.py, eval.py)
 ## Abbreviations and Glossary
-
     YOLO: You Only Look Once (object detection model)
     Swin: Shifted Window Transformer
     mAP: Mean Average Precision
     GPIO: General Purpose Input/Output
 ## Training
-
     yolo detect train   model=yolov8m.pt   data=datasets/wildlife/data.yaml   imgsz=640 epochs=100 batch=16 device=0   project=runs/train name=yolov8m_swin   save_period=1
 ## Evaluation
-
     yolo detect val   model=runs/train/yolov8m_swin/weights/best.pt   data=datasets/wildlife/data.yaml   imgsz=640 device=0
 ## Inference
-
     python src/infer.py --weights models/best.pt --source assets/test_video.mp4 --conf 0.8
 ## Real-Time Deployment
-
     python src/realtime.py --config configs/default.yaml --video assets/live_feed.mp4
+## lerts & Humane Repellent
+    Sound alerts implemented with Pygame mixer
+    Flashlight/LED via relay (GPIO)
+    Cooldown logic prevents repeated alerts while animal remains in frame
+## Troubleshooting
+    No last.pt → use save_period=1
+    Resume training → resume=True model=path/to/last.pt
+    Low FPS → reduce imgsz, use a smaller model (e.g., yolov8n.pt)
+    False alarms → increase conf, check dataset labeling
+## Contributors
+    H. Chaithali Kini
+    Hithashree B
+    Pooja Nayak
+    Soumya
+Guide: Mr. Sunil Kumar S
+## Acknowledgements
+    Ultralytics YOLOv8
+    Swin Transformer (Microsoft Research)
+    OpenCV
+    Roboflow (annotation/export)
+    VTU & Department of AI & ML
