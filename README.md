@@ -3,8 +3,8 @@ This project presents a real-time animal detection system designed to help farme
 The system uses YOLOv8 with a Swin Transformer backbone to continuously analyze video feeds and detect animals with high accuracy, even in complex farm environments.
 When an intrusion is detected, the system is designed to trigger humane repellent mechanisms (such as ultrasonic deterrents, flashing lights, or alarms) while sending IoT-based alerts (SMS, notifications, or dashboard updates) to farmers for immediate action.
 ## Project Overview
-Wildlife intrusion into farms causes significant crop loss. This project delivers a real-time detection and response pipeline: capture video → detect → decide → alert/repel → log events.
-It is designed for PC/edge deployment with an optional cloud dashboard.
+Wildlife intrusion into farms causes significant crop loss. This project delivers a real-time detection and response pipeline: capture video → detect → decide → alert → log events.
+It is designed for PC/edge deployment .
 
 Target animals: Monkey, Bison
 ## Features
@@ -14,9 +14,7 @@ Improved accuracy: 90.2% mAP
 
 Low-latency pipeline with OpenCV
 
-Instant alerts via SMS/call/app (Twilio or custom)
-
-Humane repellent: strobe lights, ultrasonic/loud sound
+Instant alerts via beep
 
 Modular codebase: train, evaluate, infer, deploy
 
@@ -41,8 +39,7 @@ graph TD;
     C --> D[Detection Results];
     D --> E{Decision};
     E -->|Alert| F[Notification System];
-    E -->|Repel| G[Humane Repellent];
-    D --> H[Logging + Cloud Sync];
+
 ## Hardware Requirements
 Video Input: Pre-recorded or streaming video (no direct camera feed)
 
@@ -55,11 +52,12 @@ Connectivity: Internet (for alerts/cloud), optional offline mode
 ## Model and Metrics
 Backbone: Swin Transformer integrated into YOLOv8
 
-Baseline: YOLOv8m
+Baseline: YOLOv8n
 
 Updated accuracy with Swin Transformer:
 
     | Metric | Value | |-------------|---------| | Precision | 90.2% | | Recall | 72.4% | | mAP | 90.2% |
+
 Confidence threshold: 0.8
 ## Key Elements
 Directory Structure Explanation
