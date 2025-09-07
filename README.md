@@ -39,6 +39,15 @@ graph TD;
     C --> D[Detection Results];
     D --> E{Decision};
     E -->|Alert| F[Notification System];
+Requirements
+
+Windows 10 or higher
+
+Webcam (for live detection)
+
+Optional: video files (.mp4, .avi, .mov)
+
+All Python dependencies are packaged in the EXE, so no Python installation is required.
 
 ## Hardware Requirements
 Video Input: Pre-recorded or streaming video (no direct camera feed)
@@ -65,28 +74,13 @@ Directory Structure Explanation
    ## 📂 Project Structure
 
 ```bash
-📂 major_project_final/
-├── 📂 data/                     # Dataset (train/val images + labels)
-│
-├── 📂 runs/                     # Training & inference results
-│   └── 📂 detect/
-│       └── 📂 weights/
-│           └── 📄 best.pt       # Best trained model
-│
-├── 📂 src/                      # Source code
-│   ├── 📄 train.py              # Training script
-│   ├── 📄 train_detect.py       # Inference script
-│   ├── 📄 gui_detection.py      # GUI with sound + alerts
-│   └── 📄 swin_backbone.py      # Swin Transformer backbone
-│
-├── 📂 configs/                  # Config files
-│   └── 📄 data.yaml             # Dataset config
-│
-├── 📂 weights/                  # Pretrained weights
-│   └── 📄 yolo11n.pt
-│
-├── 📄 requirements.txt          # Dependencies
-└── 📄 README.md                 # Documentation
+Final_Projrct/
+├─ monkey_bison_detection.exe      # EXE file
+├─ runs/detect/yolov8_swin_train1/weights/best.pt
+├─ yolov8n.pt
+├─ test_images/                    
+├─ README.md
+
 
 ## Abbreviations and Glossary
     YOLO: You Only Look Once (object detection model)
