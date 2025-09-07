@@ -64,12 +64,16 @@ Confidence threshold: 0.8
 ## Key Elements
 Directory Structure Explanation
 
-    📂 major_project_final/
+   ## 📂 Project Structure
+
+```bash
+📂 major_project_final/
 ├── 📂 data/                     # Dataset (train/val images + labels)
+│
 ├── 📂 runs/                     # Training & inference results
-│   └── 📂 detect/               
+│   └── 📂 detect/
 │       └── 📂 weights/
-│           └── 📄 best.pt        # Best trained model
+│           └── 📄 best.pt       # Best trained model
 │
 ├── 📂 src/                      # Source code
 │   ├── 📄 train.py              # Training script
@@ -85,7 +89,7 @@ Directory Structure Explanation
 │
 ├── 📄 requirements.txt          # Dependencies
 └── 📄 README.md                 # Documentation
-              
+
 ## Abbreviations and Glossary
     YOLO: You Only Look Once (object detection model)
     Swin: Shifted Window Transformer
