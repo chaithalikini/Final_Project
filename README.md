@@ -70,24 +70,19 @@ Updated accuracy with Swin Transformer:
 Confidence threshold: 0.8
 ## Key Elements
 Directory Structure Explanation
-
-   ## 📂 Project Structure
-
-```bash
-Final_Projrct/
-├─ monkey_bison_detection.exe      # EXE file
-├─ runs/detect/yolov8_swin_train1/weights/best.pt
-├─ yolov8n.pt
-├─ test_images/                    
-├─ README.md
-
-
+## 📂Project Structure
+    Final_Projrct/
+    ├─ monkey_bison_detection.exe     
+    ├─ runs/detect/yolov8_swin_train1/weights/best.pt
+    ├─ yolov8n.pt
+    ├─ test_images/                    
+    ├─ README.md
 ## Abbreviations and Glossary
     YOLO: You Only Look Once (object detection model)
     Swin: Shifted Window Transformer
     mAP: Mean Average Precision
     GPIO: General Purpose Input/Output
-## alerts & Humane Repellent
+## Alerts & Humane Repellent
     Sound alerts implemented with Pygame mixer
     Flashlight/LED via relay (GPIO)
     Cooldown logic prevents repeated alerts while animal remains in frame
