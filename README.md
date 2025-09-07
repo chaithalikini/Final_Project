@@ -50,9 +50,7 @@ Compute: GPU-enabled PC (NVIDIA GPU recommended)
 
 Repellent (any subset):
 
-    Strobe/LED (via GPIO/relay)
     Sound driver / buzzer / speaker
-    Optional ultrasonic module
 Connectivity: Internet (for alerts/cloud), optional offline mode
 ## Model and Metrics
 Backbone: Swin Transformer integrated into YOLOv8
@@ -127,7 +125,9 @@ Model Performance
     Recall	        87.6%
 
 Backbone: Swin Transformer integrated into YOLOv8
+
 Baseline Model: YOLOv8m
+
 Confidence Threshold: 0.8
 ## Troubleshooting
     No last.pt → use save_period=1
