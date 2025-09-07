@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+yolov8_env/
+
+# Roboflow dataset
+monkey_bison_detection-5cx3s-14/
+
+# YOLO runs
+runs/
+*.pt
